@@ -1,0 +1,59 @@
+body {
+  background: linear-gradient(#FFFDE2, #EBFFEA, #C1ECEE) no-repeat center center fixed;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}
+
+/*.background-circle {
+  width: 500px;
+  height: 500px;
+  background-color: #fffac4;
+}*/
+
+h1 {
+  color: #09383d;
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 6em;
+  text-align: center;
+}
+
+.enterButton {
+  font-family: "Love Ya Like A Sister", cursive;
+  font-size: 3em;
+  text-align: center;
+  color: #09383d;
+}
+
+h4 {
+  font-size: 3.5em;
+  font-family: 'Nothing You Could Do', cursive;
+  text-align: center;
+  color: #09383d;
+}
+
+p {
+  font-family: 'Special Elite', serif;
+  font-size: 2em;
+  color: #09383d;
+}
+
+.nav {
+  font-family: 'Nothing You Could Do', cursive;
+  font-size: 2.5em;
+  display: inline-block;
+  padding: 20px;
+}
+
+#home {
+  float: left;
+}
+
+#about {
+  float: right;
+}

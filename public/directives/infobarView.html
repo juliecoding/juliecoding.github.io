@@ -1,0 +1,26 @@
+<div>
+  <div class="countryName"><p>You found {{selectedCountry.name}}!</p></div>
+  <div class="subregion"><p>It's located in {{selectedCountry.subregion}}</p></div>
+  <div class="capital"><p>Its capital is {{selectedCountry.capital}}.</p></div>
+  <div class="population"><p>There are {{selectedCountry.population | number}} people living there.</p></div>
+  <div class="area"><p>The country is {{selectedCountry.area | number}} sq. kilometers</p></div>
+</div>
+
+<!-- Pluses/optional items:
+A. Borders (bordering countries)
+B. Currency
+C. Language -->
+
+<!-- Problem: how to randomly select a particular country????  -->
+<!-- Possible solution: have an array/list/whatever of all the included countries codes of some kind -->
+
+<!-- How the results come back
+1. Array with each country as an object
+2. Some of the results are top-level (no subarray needed)
+  a. name
+  b. subregion
+  c. capital
+  d. population
+  e. native name
+  f. area
+3. Currencies, languages and borders are all sub-arrays.  -->
