@@ -19,3 +19,8 @@ angular.module('app', ['ui.router'])
   $urlRouterProvider
     .otherwise('/game');
 });
+
+// Create a new repo called 
+// juliecoding.github.io
+//
+// Push to that to "host" the site.

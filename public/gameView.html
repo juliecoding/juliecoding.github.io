@@ -1,23 +1,37 @@
+<div class="gameViewWrapper">
+  <div class="nav">
+    <div id="home"><a ui-sref="home">Home</a></div>
+    <div id="about"><a ui-sref="about">About</a></div>
+  </div>
 
-<div class="nav" id="home"><a ui-sref="home">Home</a></div>
-<div class="nav" id="about"><a ui-sref="about">About</a></div>
+  <div class="globe">
+    <section class="stage">
+      <figure class="ball"><span class="shadow"></span></figure>
+    </section>
+  </div>
 
-<img src="public/assets/small world image for testing.jpeg" alt="Hello, world!">
+  <div class="spinMe" ng-click="selectCountry()">Spin me!</div>
 
-<infobar-dir></infobar-dir>
+  <div class="interimInfobar" ng-if="selectedCountry">
+    <div class="countryName"><p>You found {{selectedCountry.name}}!</p></div>
+    <div class="subregion"><p>It's located in {{selectedCountry.subregion}}</p></div>
+    <div class="capital"><p>Its capital is {{selectedCountry.capital}}.</p></div>
+    <div class="population"><p>There are {{selectedCountry.population | number}} people living there.</p></div>
+    <div class="area"><p>The country is {{selectedCountry.area | number}} sq. kilometers in size.</p></div>
+  </div>
 
+  <!-- <div class="interimInfobar" ng-repeat="selected in selectedCountry">
+    <div class="countryName"><p>You found {{selected.name}}!</p></div>
+    <div class="subregion"><p>It's located in {{selected.subregion}}</p></div>
+    <div class="capital"><p>Its capital is {{selected.capital}}.</p></div>
+    <div class="population"><p>There are {{selected.population | number}} people living there.</p></div>
+    <div class="area"><p>The country is {{selected.area | number}} sq. kilometers in size.</p></div>
+  </div> -->
 
-<!-- <div class="spinButton" ng-click="spinGlobe()">Spin me!</div> -->
-<!-- <button type="button" name="button" ng-click="getCountry()">Get Country</button> -->
+  <!-- <infobar-dir></infobar-dir> -->
 
-<!-- <audio id="soundClip">
-	<source src="audio/beep.mp3"></source>
-	<source src="audio/beep.ogg"></source>
-</audio> -->
+  <!-- Need a way to toggle/change state on a second click. The progression should move from still to spinning globe to stopped globe, and on click for stopped globe, an API call should be made. -->
 
-<!-- Need a way to toggle/change state on a second click. The progression should move from still to spinning globe to stopped globe, and on click for stopped globe, an API call should be made. -->
-
-<!-- Globe likely goes here, either as a directive or written in -->
-
-<!-- <div class="attribution">A game created by Julie A. Kohler</div> -->
-<!-- ^Question: Should this be a copyright notice? -->
+  <!-- <div class="attribution">A game created by Julie A. Kohler</div> -->
+  <!-- ^Question: Should this be a copyright notice? -->
+</div>

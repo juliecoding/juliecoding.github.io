@@ -1,16 +1,27 @@
-angular.module("app").controller("gameCtrl", function($scope, gameService) {
+angular.module("app").controller("gameCtrl", function($scope, $http, gameService) {
 
-  // $scope.getCountry = gameService.getCountry;
-  //
-  // $scope.selectedCountry = $scope.getCountry();
-  //
-  // gameService.getCountry().then(function(response){
-  //   $scope.country = response.data.name;
-  // })
+  var URL = 'https://restcountries.eu/rest/v1/alpha/'
+  // $scope.getCountry = function() {
+  //   return $http({
+  //     method: 'GET',
+  //     url: URL + "COL"
+  //   }).then(function(response){
+  //     console.log(response)
+  //     $scope.selectedCountry = response;
+  //     return $scope.selectedCountry;
+  //   })
+  // };
 
-  // $scope.spinGlobe = function() {
-  //   //ANIMATES THE SPINNING GLOBE & PLAYS SOUND :P
-  // }
+  $scope.spinGlobe = function() {
+    console.log("spun")
+  }
+
+  $scope.selectCountry = function(){
+    gameService.getCountry().then(function(response){
+      $scope.selectedCountry = response.data;
+      console.log($scope.selectedCountry);
+    })
+  }
 
   // $scope.audio = $("#soundClip")[0];
   // $("#spinButton").on('click', function() {
@@ -18,8 +29,3 @@ angular.module("app").controller("gameCtrl", function($scope, gameService) {
   // })
 
 });
-
-
-//1. Put spin button on directive
-//2. Call service from directive controller
-//3. In the "then", set the data on the directive scope
