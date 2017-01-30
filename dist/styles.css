@@ -8,11 +8,11 @@ h1 {
   font-family: "Love Ya Like A Sister", cursive;
   font-size: 6em;
   text-align: center;
-  margin-bottom: -20px; }
+  margin-bottom: -10px; }
 
 h4 {
-  font-size: 3.5em;
-  font-family: "Nothing You Could Do", cursive;
+  font-size: 3.98em;
+  font-family: "Reenie Beanie", cursive;
   text-align: center; }
 
 .enterButton {
@@ -29,22 +29,21 @@ p {
   justify-content: flex-end;
   text-align: center;
   padding: 20px;
-  font-size: 1.5em;
+  font-size: 2.75em;
   margin: auto;
-  font-family: "Nothing You Could Do", cursive;
-  text-decoration: none; }
+  font-family: "Reenie Beanie", cursive; }
 
 #home, #about, #game {
   margin-right: 5%; }
 
-.interimInfobar {
-  padding: 20px;
-  margin-left: 10px; }
+.ctrlInfobar {
+  padding: 25px;
+  margin-left: 5%; }
 
 .spinMe {
   width: 150px;
   height: 40px;
-  margin: 30px auto 0 auto;
+  margin: 45px auto 0 auto;
   display: block;
   font-size: 22px;
   text-align: center;
@@ -60,16 +59,28 @@ p {
   border-radius: 5px;
   box-shadow: 0px 5px 2px 0px #07526e; }
 
+.spinMe:hover {
+  background-color: #0ea5b6; }
+
 .aboutWrapper {
-  padding: 0 25px; }
+  padding: 25px 25px;
+  max-width: 1100px;
+  margin: auto; }
   .aboutWrapper p {
     font-family: "Roboto Slab", serif;
     font-size: 1.5em;
-    line-height: 1.4; }
-    .aboutWrapper p a {
+    line-height: 1.4;
+    margin-bottom: 25px; }
+    .aboutWrapper p a, .aboutWrapper p .library {
       font-family: "Special Elite", serif;
       font-size: 1.3em;
       color: #094142; }
+
+.aboutImage {
+  display: block;
+  margin: 150px auto;
+  width: 200px;
+  height: 200px; }
 
 /***************************/
 .globe {
