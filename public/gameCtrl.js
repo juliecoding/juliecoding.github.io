@@ -16,11 +16,20 @@ angular.module("app").controller("gameCtrl", function($scope, $http, gameService
     console.log("spun")
   }
 
+  $scope.spinText = "Spin Me!"
+
   $scope.selectCountry = function(){
-    gameService.getCountry().then(function(response){
-      $scope.selectedCountry = response.data;
-      console.log($scope.selectedCountry);
-    })
+    $scope.spin = !$scope.spin;
+    if (!$scope.spin) {
+      gameService.getCountry().then(function(response){
+        $scope.selectedCountry = response.data;
+        console.log($scope.selectedCountry);
+      })
+      $scope.spinText = "Spin Me!"
+    }
+    else {
+      $scope.spinText = "Stop!"
+    }
   }
 
   // $scope.audio = $("#soundClip")[0];

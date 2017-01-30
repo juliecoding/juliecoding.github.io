@@ -6,29 +6,19 @@
 
   <div class="globe">
     <section class="stage">
-      <figure class="ball"><span class="shadow"></span></figure>
+      <figure class="ball" ng-class="{quickSpin: spin}"><span class="shadow"></span></figure>
     </section>
   </div>
 
-  <div class="spinMe" ng-click="selectCountry()">Spin me!</div>
+  <div class="spinMe" ng-click="selectCountry()">{{spinText}}</div>
 
   <div class="interimInfobar" ng-if="selectedCountry">
     <div class="countryName"><p>You found {{selectedCountry.name}}!</p></div>
-    <div class="subregion"><p>It's located in {{selectedCountry.subregion}}</p></div>
+    <div class="subregion"><p>It's located in {{selectedCountry.subregion}}.</p></div>
     <div class="capital"><p>Its capital is {{selectedCountry.capital}}.</p></div>
     <div class="population"><p>There are {{selectedCountry.population | number}} people living there.</p></div>
     <div class="area"><p>The country is {{selectedCountry.area | number}} sq. kilometers in size.</p></div>
   </div>
-
-  <!-- <div class="interimInfobar" ng-repeat="selected in selectedCountry">
-    <div class="countryName"><p>You found {{selected.name}}!</p></div>
-    <div class="subregion"><p>It's located in {{selected.subregion}}</p></div>
-    <div class="capital"><p>Its capital is {{selected.capital}}.</p></div>
-    <div class="population"><p>There are {{selected.population | number}} people living there.</p></div>
-    <div class="area"><p>The country is {{selected.area | number}} sq. kilometers in size.</p></div>
-  </div> -->
-
-  <!-- <infobar-dir></infobar-dir> -->
 
   <!-- Need a way to toggle/change state on a second click. The progression should move from still to spinning globe to stopped globe, and on click for stopped globe, an API call should be made. -->
 

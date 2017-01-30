@@ -247,8 +247,6 @@ angular.module("app").service("gameService", function($http) {
     //   this.randomCountryCode = this.countryCodes[randomNum];
     // };
 
-    console.log("SERVICEHITNUMEROUNO")
-
     var randomNum = Math.floor(Math.random() * this.countryCodes.length);
 
     return $http({

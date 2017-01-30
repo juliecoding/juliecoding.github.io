@@ -1,50 +1,51 @@
 
+$gradientYellow: rgba(255, 253, 226, 1);
+$gradientGreen: rgba(217, 255, 216, 1);
+$gradientBlue: rgba(182, 237, 239, 1);
+$mainFontColor: #094142;
+
+$decorativeHeadingFont: "Love Ya Like A Sister";
+$handwritingFont: 'Nothing You Could Do';
+$decorativeBodyFont: 'Special Elite';
+$plainFont: 'Roboto Slab';
+
 body {
   background:
     radial-gradient(
       circle,
-      rgba(255, 253, 226, 1),
-      rgba(217, 255, 216, 1),
-      /*rgba(217, 255, 216, 1),
-      rgba(193, 236, 238, 1),*/
-      rgba(182, 237, 239, 1)
+      $gradientYellow,
+      $gradientGreen,
+      $gradientBlue
     )
-    /*,
-    url(../assets/kidsAtBeach.jpg)*/
     no-repeat center center fixed;
   margin: 0;
   box-sizing: border-box;
+  color: $mainFontColor;
 }
 
 h1 {
-  color: #09383d;
-  font-family: "Love Ya Like A Sister", cursive;
+  font-family: $decorativeHeadingFont, cursive;
   font-size: 6em;
   text-align: center;
   margin-bottom: -20px;
 }
 
-.enterButton {
-  font-family: "Love Ya Like A Sister", cursive;
-  font-size: 3em;
-  text-align: center;
-  color: #09383d;
-}
-
 h4 {
   font-size: 3.5em;
-  font-family: 'Nothing You Could Do', cursive;
+  font-family: $handwritingFont, cursive;
   text-align: center;
-  color: #09383d;
+}
+
+.enterButton {
+  font-family: $decorativeHeadingFont, cursive;
+  font-size: 3em;
+  text-align: center;
 }
 
 p {
-  font-family: 'Special Elite', serif;
+  font-family: $decorativeBodyFont, serif;
   font-size: 2em;
-  color: #09383d;
 }
-
-
 
 .nav {
   display: flex;
@@ -53,7 +54,7 @@ p {
   padding: 20px;
   font-size: 1.5em;
   margin: auto;
-  font-family: 'Nothing You Could Do', cursive;
+  font-family: $handwritingFont, cursive;
   text-decoration: none;
 }
 
@@ -73,7 +74,7 @@ p {
   display: block;
   font-size: 22px;
   text-align: center;
-
+  cursor: pointer;
   color: white;
   font-weight: bold;
   background-color: white;
@@ -88,21 +89,18 @@ p {
 
 .aboutWrapper{
   padding: 0 25px;
-}
-
-.aboutWrapper p {
-    font-family: 'Roboto Slab', serif;;
+  p {
+    font-family: $plainFont, serif;;
     font-size: 1.5em;
-    color: #09383d;
     line-height: 1.4;
-
+    a {
+      font-family: $decorativeBodyFont, serif;
+      font-size: 1.3em;
+      color: $mainFontColor;
+    }
+  }
 }
 
-.aboutWrapper p a {
-  font-family: 'Special Elite', serif;
-  font-size: 1.3em;
-  color: #09383d;
-}
 
 /***************************/
 .globe {
@@ -121,6 +119,14 @@ p {
   -webkit-transform-style: preserve-3d;
   background: url('../assets/small world image for testing.jpeg') repeat-x;
   background-size: auto 100%;
+  // -webkit-animation: move-map 20s infinite linear;
+  // -moz-animation: move-map 20s infinite linear;
+  // -o-animation: move-map 20s infinite linear;
+  // -ms-animation: move-map 20s infinite linear;
+  // animation: move-map 20s infinite linear;
+}
+
+.slowSpin {
   -webkit-animation: move-map 20s infinite linear;
   -moz-animation: move-map 20s infinite linear;
   -o-animation: move-map 20s infinite linear;
@@ -129,20 +135,11 @@ p {
 }
 
 .quickSpin {
-  display: absolute;
-  width: 100%;
-  height: 100%;
-  margin-left: 465px;
-  border-radius: 50%;
-  position: relative;
-  -webkit-transform-style: preserve-3d;
-  background: url('../assets/small world image for testing.jpeg') repeat-x;
-  background-size: auto 100%;
-  -webkit-animation: move-map 5s infinite linear;
-  -moz-animation: move-map 5s infinite linear;
-  -o-animation: move-map 5s infinite linear;
-  -ms-animation: move-map 5s infinite linear;
-  animation: move-map 5s infinite linear;
+  -webkit-animation: move-map 2s infinite linear;
+  -moz-animation: move-map 2s infinite linear;
+  -o-animation: move-map 2s infinite linear;
+  -ms-animation: move-map 2s infinite linear;
+  animation: move-map 2s infinite linear;
 }
 
 .ball:before {
