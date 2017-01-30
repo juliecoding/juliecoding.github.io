@@ -17,10 +17,12 @@ angular.module('app', ['ui.router'])
     })
 
   $urlRouterProvider
-    .otherwise('/game');
+    .otherwise('/');
 });
 
-// Create a new repo called 
+// git remote add hosting https://github.com/juliecoding/juliecoding.github.io.git
+
+// Create a new repo called
 // juliecoding.github.io
 //
 // Push to that to "host" the site.
