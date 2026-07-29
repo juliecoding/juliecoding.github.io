@@ -1,3 +1,3 @@
-# geographyApp2
+# My website
 
-Relied on an API that is no longer supported. But enjoy the animation!
+Showing my skills and experience
