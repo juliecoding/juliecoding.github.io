@@ -1,13 +1,14 @@
 :root {
-  --bg: #131320;
-  --bg-raised: #313142;
-  --text: #f4fcf4;
-  --text-muted: #c3c3c3;
-  --accent-blue: #738DA3;
-  --accent-mustard: #B38F20;
-  --border: #2b2b2b;
-  --font-heading: "Karla", -apple-system, "Segoe UI", sans-serif;
-  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", Tahoma, sans-serif;
+  --bg-start: #1c1c1e;
+  --bg-end: #2b2b2d;
+  --bg-raised: #333335;
+  --text: #f5f3ff;
+  --text-muted: #c9c3e0;
+  --accent-lime: #baff29;
+  --accent-coral: #ff5c7a;
+  --border: rgba(255, 255, 255, 0.1);
+  --font-heading: "Bricolage Grotesque", -apple-system, sans-serif;
+  --font-body: "Plus Jakarta Sans", -apple-system, "Segoe UI", sans-serif;
 }
 
 * {
@@ -16,19 +17,19 @@
 }
 
 body {
-  background-color: var(--bg);
+  background: linear-gradient(160deg, var(--bg-start), var(--bg-end)) fixed;
   color: var(--text);
   font-family: var(--font-body);
   font-weight: normal;
   max-width: 760px;
   margin: 0 auto;
   padding: 3rem 1.5rem 5rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 section,
 header {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 h1,
@@ -39,27 +40,41 @@ h4 {
 }
 
 section > h2 {
-  color: var(--accent-mustard);
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.4rem;
-  margin-bottom: 1.25rem;
-  font-weight: 600;
+  display: inline-block;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+  font-weight: 800;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+section > h2::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 60%;
+  margin-top: 0.35rem;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--accent-lime), var(--accent-coral));
 }
 
 h1 {
-  font-size: 2.75rem;
-  font-weight: 600;
-  color: var(--accent-blue);
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, var(--accent-lime), var(--accent-coral));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 h3 {
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 p,
@@ -69,8 +84,9 @@ li {
 }
 
 a {
-  color: var(--accent-mustard);
+  color: var(--accent-lime);
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
@@ -96,14 +112,16 @@ li + li {
 .portrait {
   width: 230px;
   border-radius: 50%;
-  border: 3px solid var(--text-muted);
   flex-shrink: 0;
+  padding: 5px;
+  background: linear-gradient(135deg, var(--accent-lime), var(--accent-coral));
+  box-shadow: 0 0 30px rgba(255, 92, 122, 0.35);
 }
 
 .tagline {
-  color: var(--accent-mustard);
+  color: var(--accent-coral);
   font-size: 1.35rem;
-  font-weight: bold;
+  font-weight: 700;
   margin-top: 0.15rem;
 }
 
@@ -132,13 +150,25 @@ li + li {
 }
 
 .skills-grid h3 {
-  color: var(--accent-blue);
-  margin-bottom: 0.5rem;
+  color: var(--accent-lime);
+  margin-bottom: 0.65rem;
 }
 
 .skills-grid ul {
   list-style: none;
   padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.skills-grid li {
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.85rem;
+  color: var(--text);
 }
 
 /* Work history */
@@ -146,27 +176,45 @@ li + li {
 .job {
   background-color: var(--bg-raised);
   border: 1px solid var(--border);
-  border-left: 3px solid var(--accent-blue);
-  border-radius: 6px;
-  padding: 1.25rem 1.5rem;
+  border-radius: 16px;
+  padding: 1.4rem 1.6rem;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-lime), var(--accent-coral));
+}
+
+.job:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35), 0 0 0 1px var(--accent-coral);
 }
 
 .job + .job {
-  margin-top: 1.5rem;
+  margin-top: 1.75rem;
 }
 
 .job-header h3 {
-  color: var(--accent-mustard);
+  color: var(--text);
 }
 
 .job-meta {
-  color: var(--accent-blue);
+  color: var(--accent-lime);
   font-size: 0.85rem;
   margin-top: 0.2rem;
+  font-weight: 600;
 }
 
 .job ul {
-  margin-top: 0.4rem;
+  margin-top: 0.6rem;
 }
 
 /* Community / education */
@@ -185,7 +233,7 @@ li + li {
 
 .community li,
 .education li {
-  padding-left: 1rem;
+  padding-left: 1.1rem;
   position: relative;
 }
 
@@ -195,14 +243,14 @@ li + li {
   position: absolute;
   left: 0;
   top: 0.5em;
-  width: 6px;
-  height: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
-  background-color: var(--accent-mustard);
+  background: linear-gradient(135deg, var(--accent-lime), var(--accent-coral));
 }
 
 .community ul ul li::before {
-  background-color: var(--accent-blue);
+  background: var(--accent-coral);
 }
 
 @media (max-width: 480px) {
