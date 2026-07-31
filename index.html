@@ -3,9 +3,228 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Julie Kohler — Senior Software Engineer"
+    />
     <title>Julie Kohler</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <h1>It's a me, Julie-o!</h1>
+    <header>
+      <div class="intro">
+        <img class="portrait" src="assets/portrait1.jpg" alt="Julie Kohler" />
+        <div>
+          <hgroup>
+            <h1>Julie Kohler</h1>
+            <p class="tagline">Senior Software Engineer</p>
+          </hgroup>
+          <p class="contact">
+            <a
+              href="https://linkedin.com/in/jakohler"
+              target="_blank"
+              rel="noopener"
+              >linkedin.com/in/jakohler</a
+            >
+          </p>
+          <p class="bio">
+            Building reliable systems, leading technical initiatives, and
+            helping teams ship with confidence.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="about-me">
+      <h2>About me</h2>
+      <p>
+        I’m a software engineer with almost a decade of experience leading
+        cross-functional technical initiatives, mentoring technologists, and
+        building collaborative engineering communities. I’m known for data- and
+        business-driven prioritization, as well as a drive to improve processes
+        and systems. Now I’m looking to extend my pattern of ownership into a
+        formal engineering leadership role.
+      </p>
+    </section>
+
+    <section class="skills">
+      <h2>Skills</h2>
+      <div class="skills-grid">
+        <div>
+          <h3>Engineering Leadership</h3>
+          <ul>
+            <li>Technical planning</li>
+            <li>Project leadership</li>
+            <li>Stakeholder communication</li>
+            <li>Mentoring</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Languages</h3>
+          <ul>
+            <li>Go</li>
+            <li>JavaScript</li>
+            <li>TypeScript</li>
+            <li>Java</li>
+            <li>PHP</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Tools</h3>
+          <ul>
+            <li>Claude Code</li>
+            <li>Codex</li>
+            <li>Datadog</li>
+            <li>LaunchDarkly</li>
+            <li>Cloudflare</li>
+            <li>Sanity</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Technologies</h3>
+          <ul>
+            <li>AWS</li>
+            <li>Protobuf</li>
+            <li>Twirp (RPC)</li>
+            <li>GraphQL</li>
+            <li>SQL DBs</li>
+            <li>Docker</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-history">
+      <h2>Work Experience</h2>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Software Engineer III, Senior Software Engineer</h3>
+          <p class="job-meta">
+            Splice, New York, NY &middot; Nov 2021–July 2026
+          </p>
+        </div>
+        <ul>
+          <li>
+            Built Go services and RPC/REST APIs powering payments and other
+            backend systems
+          </li>
+          <li>
+            Led backend development for multiple pricing experiments, turning
+            product ideas into A/B tests using feature flags and data tracking
+          </li>
+          <li>
+            Expanded Splice's payment systems to support multi-currency checkout
+            by updating data models, APIs, and payment provider integrations
+          </li>
+          <li>
+            Built an AWS Lambda-backed transcript publishing workflow integrated
+            with S3 and Cloudflare, improving accessibility for educational
+            videos
+          </li>
+          <li>
+            Migrated admin workflows from third-party platforms to internal
+            services, reducing vendor dependency and improving performance and
+            auditability
+          </li>
+          <li>
+            Improved webhook reliability, incident response, and service
+            observability using Datadog
+          </li>
+        </ul>      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Software Engineer</h3>
+          <p class="job-meta">
+            Claravine, Provo, UT &middot; Sep 2019–Nov 2021
+          </p>
+        </div>
+        <ul>
+          <li>Developed features for a B2B data standardization platform</li>
+          <li>
+            Maintained a core Laravel/PHP service and Node/Kotlin microservices,
+            supporting API integrations and data processing workflows
+          </li>
+          <li>
+            Data migrations, integrations with third-party platforms like Google
+            Analytics, file transfer modules, and data visualization
+          </li>
+        </ul>      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Software Engineer I, UI Analytics Engineer Intern</h3>
+          <p class="job-meta">
+            NICE inContact, Sandy, UT &middot; Oct 2018–Sep 2019, June 2017–May
+            2018
+          </p>
+        </div>
+        <ul>
+          <li>
+            Internationalized and added data visualizations to a speech
+            analytics dashboard using AngularJS and D3.js
+          </li>
+        </ul>      </article>
+
+      <article class="job">
+        <div class="job-header">
+          <h3>Software Development Intern in Test</h3>
+          <p class="job-meta">
+            Health Catalyst, Salt Lake City, UT &middot; May 2018–Oct 2018
+          </p>
+        </div>
+        <ul>
+          <li>
+            Created a manual and automated test case library for an Angular/C#
+            application
+          </li>
+          <li>
+            Worked closely with product management to prioritize upcoming work
+            and communicate feature requirements to developers
+          </li>
+        </ul>      </article>
+    </section>
+
+    <section class="community">
+      <h2>Community</h2>
+      <ul>
+        <li>Teach at educational non-profit Tech-Moms (2022–Present)</li>
+        <li>Led study and affinity groups at Splice (2023–2026)</li>
+        <li>Mentored FIRST Tech Challenge robotics students (2023–2025)</li>
+        <li>
+          Spoke at
+          <ul>
+            <li>GoWest Conference (2021)</li>
+            <li>Women Who Go Utah (2020)</li>
+            <li>Utah Node.js (2019)</li>
+            <li>QA at the Point (2018)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section class="education">
+      <h2>Education</h2>
+      <ul>
+        <li>
+          <strong>Utah Valley University</strong> &mdash; Courses in computer
+          science, 2019–2020
+        </li>
+        <li><strong>CompTIA A+ Certification</strong>, 2019</li>
+        <li><strong>DevMountain</strong> &mdash; Web Development, 2017</li>
+        <li>
+          <strong>Brigham Young University</strong> &mdash; MA (Comparative
+          Studies), 2014; BA (German), 2011
+        </li>
+      </ul>
+    </section>
   </body>
 </html>

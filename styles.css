@@ -1,0 +1,219 @@
+:root {
+  --bg: #131320;
+  --bg-raised: #313142;
+  --text: #f4fcf4;
+  --text-muted: #c3c3c3;
+  --accent-blue: #738DA3;
+  --accent-mustard: #B38F20;
+  --border: #2b2b2b;
+  --font-heading: "Karla", -apple-system, "Segoe UI", sans-serif;
+  --font-body: "IBM Plex Sans", -apple-system, "Segoe UI", Tahoma, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: normal;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+  line-height: 1.5;
+}
+
+section,
+header {
+  margin-top: 3rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-heading);
+}
+
+section > h2 {
+  color: var(--accent-mustard);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+p,
+li {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--accent-mustard);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  padding-left: 1.25rem;
+}
+
+li + li {
+  margin-top: 0.35rem;
+}
+
+/* Header / intro */
+
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.portrait {
+  width: 230px;
+  border-radius: 50%;
+  border: 3px solid var(--text-muted);
+  flex-shrink: 0;
+}
+
+.tagline {
+  color: var(--accent-mustard);
+  font-size: 1.35rem;
+  font-weight: bold;
+  margin-top: 0.15rem;
+}
+
+.contact {
+  margin-top: 0.6rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.contact span {
+  margin: 0 0.4rem;
+}
+
+.bio {
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+/* Skills */
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+}
+
+.skills-grid h3 {
+  color: var(--accent-blue);
+  margin-bottom: 0.5rem;
+}
+
+.skills-grid ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Work history */
+
+.job {
+  background-color: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-blue);
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+}
+
+.job + .job {
+  margin-top: 1.5rem;
+}
+
+.job-header h3 {
+  color: var(--accent-mustard);
+}
+
+.job-meta {
+  color: var(--accent-blue);
+  font-size: 0.85rem;
+  margin-top: 0.2rem;
+}
+
+.job ul {
+  margin-top: 0.4rem;
+}
+
+/* Community / education */
+
+.community ul,
+.education ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.community ul ul {
+  list-style: none;
+  padding-left: 1.25rem;
+  margin-top: 0.35rem;
+}
+
+.community li,
+.education li {
+  padding-left: 1rem;
+  position: relative;
+}
+
+.community li::before,
+.education li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--accent-mustard);
+}
+
+.community ul ul li::before {
+  background-color: var(--accent-blue);
+}
+
+@media (max-width: 480px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact span {
+    display: block;
+    margin: 0;
+  }
+}
